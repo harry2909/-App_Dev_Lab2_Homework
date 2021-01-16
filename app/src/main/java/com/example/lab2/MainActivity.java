@@ -32,14 +32,16 @@ public class MainActivity extends AppCompatActivity {
             mShowCount.setText(Integer.toString(mCount));
         }
         if(mCount % 2 == 0){
-            findViewById(R.id.button_count).setBackgroundColor(Color.RED);
+            view.setBackgroundColor(Color.RED);
         }
         else{
-            findViewById(R.id.button_count).setBackgroundColor(Color.BLUE);
+            view.setBackgroundColor(Color.BLUE);
         }
+        findViewById(R.id.button_zero).setBackgroundColor(Color.GREEN);
     }
 
     public void resetCount(View view) {
+        view.setBackgroundColor(Color.GRAY);
         mCount = 0;
         mShowCount.setText(Integer.toString(mCount));
     }
